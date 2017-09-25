@@ -1,0 +1,4 @@
+body {
+  width: 300px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
