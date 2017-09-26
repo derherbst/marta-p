@@ -56,4 +56,4 @@ gulp.task('watch', function () {
   gulp.watch("*.html").on("change", server.reload);
 });
 
-gulp.task('default', ['scripts', 'styles', 'image', 'watch']);
+gulp.task('default', ['scripts', 'styles', 'watch']);
