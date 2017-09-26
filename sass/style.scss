@@ -1,7 +1,11 @@
-$width: 300px;
+@import "normalize.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "global/layout.scss";
 
-
-body {
-  width: $width;
-  transition: all 0.2s ease;
-}
+@import "blocks/main.scss";
+@import "blocks/section.scss";
+@import "blocks/social-wrapper.scss";
+@import "blocks/exp-wrapper.scss";
+@import "blocks/work-list.scss";
+@import "blocks/work-block.scss";

@@ -1,0 +1,18 @@
+.section {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: $black;
+  &--home {
+    background: url('../img/storge-bg-2.jpg') center center no-repeat #000;
+    background-size: cover;
+  }
+  &--trailer,
+  &--photos {
+    display: flex;
+  }
+  &--cast {
+    background: url('../img/cast-bg.jpg') center center no-repeat #000;
+    background-size: cover;
+  }
+}
