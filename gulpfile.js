@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var uglify = require('gulp-uglify');
+var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
 var server = require("browser-sync").create();
 var imagemin = require('gulp-imagemin');
@@ -10,6 +11,7 @@ var postcss = require('gulp-postcss');
 
 gulp.task('styles', function () {
   gulp.src('sass/style.scss')
+    .pipe(plumber())
     .pipe(sass({
       style: 'compressed'
     }))
@@ -18,7 +20,6 @@ gulp.task('styles', function () {
         "last 2 versions"
       ]})
     ]))
-    .on('error', console.error.bind(console))
     .pipe(gulp.dest('css'))
     .pipe(server.stream());
 });
@@ -31,8 +32,8 @@ gulp.task('image', function () {
 
 gulp.task('scripts', function () {
   gulp.src('js/*.js')
+    .pipe(plumber())
     .pipe(uglify())
-    .on('error', console.error.bind(console))
     .pipe(gulp.dest('minjs'))
     .pipe(server.stream());
 });
@@ -52,7 +53,7 @@ gulp.task('watch', function () {
   
   gulp.watch('js/*.js', ['scripts']);
   gulp.watch("sass/**/*.{scss,sass}", ['styles']);
-//  gulp.watch("img/*", ['image']);
+  gulp.watch("img/*", ['image']);
   gulp.watch("*.html").on("change", server.reload);
 });
 
