@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <title>MARTA PFEIFFER</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="js/jquery-3.2.1.slim.min.js"></script>
+  <script src="js/jquery.slidereveal.min.js"></script>
 </head>
 <body>
   <main class="main">
     <section class="section section--intro">
       <div class="section__inner">
-        <h1 class="section__name">Marta Pfeiffer</h1>
+        <h1 id='trigger' class="section__name">Marta Pfeiffer</h1>
         <ul class="social-wrapper section__social">
           <li class="social-wrapper__item">Mail</li>
           <li class="social-wrapper__item">Fb</li>
@@ -57,7 +59,7 @@
         </div>
       </div>
     </section>
-    <section class="section section--work">
+    <section id='slider' class="section section--work">
       <div class="section__inner">
         <div class="work">
           <div class="work__block">
@@ -121,5 +123,12 @@
       </div>
     </section>
   </main>
+  <script>
+    $('#slider').slideReveal({
+  trigger: $("#trigger"),
+      position: "right",
+      width: 1000
+});
+  </script>
 </body>
 </html>
