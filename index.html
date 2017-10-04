@@ -17,9 +17,14 @@
           <li class="social-wrapper__item">Fb</li>
           <li class="social-wrapper__item">Insta</li>
         </ul>
-        <div class="section__side">
+        <div id="hide-manually" class="section__side">
           <span>About</span>
         </div>
+<!--
+        <div class="section__side section__side--work">
+          <span>Work</span>
+        </div>
+-->
       </div>
     </section>
     <section class="section section--exp">
@@ -54,7 +59,7 @@
             </div>
           </div>
         </div>
-        <div class="section__side">
+        <div id="hide-manually" class="section__side">
           <span>About</span>
         </div>
       </div>
@@ -64,7 +69,7 @@
         <div class="work">
           <div class="work__block">
             <div class="work__about">
-              <h2 class="work__title">ESTROUS</h2>
+              <h2 id="slider"  class="work__title">ESTROUS</h2>
               <p>The written separation into syllables is usually marked by a hyphen when using English orthography.</p>
             </div>
             <div class="work__image-wrapper">
@@ -117,18 +122,18 @@
             </div>
           </div>
         </div>
-        <div class="section__side section__side--work">
-          <span>Work</span>
-        </div>
       </div>
     </section>
   </main>
   <script>
-    $('#slider').slideReveal({
-  trigger: $("#trigger"),
+    var sample1 = $("#slider").slideReveal({
+      trigger: $("#trigger"),
       position: "right",
-      width: 1000
-});
+      width: "90%"
+    })
+    $("#hide-manually").click(function(){
+      sample1.slideReveal("hide");
+    });
   </script>
 </body>
 </html>
