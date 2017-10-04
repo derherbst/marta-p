@@ -17,7 +17,7 @@
           <li class="social-wrapper__item">Fb</li>
           <li class="social-wrapper__item">Insta</li>
         </ul>
-        <div class="section__side">
+        <div id="hide-manually" class="section__side">
           <span>About</span>
         </div>
       </div>
@@ -124,11 +124,20 @@
     </section>
   </main>
   <script>
-    $('#slider').slideReveal({
-  trigger: $("#trigger"),
-      position: "right",
-      width: 1000
-});
+//    $('#slider').slideReveal({
+//  trigger: $("#trigger"),
+//      position: "right",
+//      width: "90%"
+//});
+    
+    var sample1 = $("#slider").slideReveal({
+          trigger: $("#trigger"),
+          position: "right",
+          width: "90%"
+        })
+    $("#hide-manually").click(function(){
+          sample1.slideReveal("hide");
+        });
   </script>
 </body>
 </html>
