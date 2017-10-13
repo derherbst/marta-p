@@ -403,7 +403,8 @@ body {
   min-width: 320px;
   margin: 0 auto;
   font-family: 'Circe_bold', sans-serif;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  position: relative; }
 
 h1,
 h2,
@@ -451,7 +452,7 @@ nav {
   /* Safari, Android, iOS */ }
 
 @font-face {
-  font-family: Circebold;
+  font-family: Circe;
   src: url("../../fonts/Circe-Regular.woff") format("woff"), url("fonts/Circe-Regular.ttf") format("truetype");
   /* Safari, Android, iOS */ }
 
@@ -461,8 +462,17 @@ nav {
   /* Safari, Android, iOS */ }
 
 @font-face {
+  font-family: CirceELight;
+  src: url("../../fonts/Circe-ExtraLight.woff") format("woff"), url("fonts/Circe-ExtraLight.ttf") format("truetype");
+  /* Safari, Android, iOS */ }
+
+@font-face {
   font-family: Bagnard;
   src: url("../../fonts/Bagnard.otf") format("opentype"); }
+
+.main {
+  overflow: scroll;
+  height: 100vh; }
 
 .section {
   width: 100%;
@@ -485,13 +495,24 @@ nav {
         -ms-flex-align: stretch;
             align-items: stretch; }
   .section--work {
-    overflow: scroll;
-    background: #212121; }
+    background: #212121;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    right: calc(60px + -90vw) !important; }
 
 .section__inner {
   padding-left: 50px;
   position: relative;
   width: 100%; }
+  .section__inner--work {
+    overflow: scroll; }
 
 .section__name {
   width: 490px;
@@ -515,11 +536,19 @@ nav {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   text-transform: capitalize; }
-  .section__side--work {
-    position: -webkit-sticky;
-    position: sticky;
+
+.section__side--work {
+  height: 100vh;
+  position: relative; }
+  .section__side--work span {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    position: absolute;
     top: 50%;
-    left: 0; }
+    -webkit-transform: rotate(-90deg) translateY(-100px);
+            transform: rotate(-90deg) translateY(-100px);
+    width: 200px;
+    text-align: center; }
 
 .social-wrapper__item {
   display: inline-block;
@@ -597,6 +626,7 @@ nav {
 .work__about {
   width: 355px; }
   .work__about p {
+    font-family: CirceELight, sans-serif;
     font-size: 22px;
     line-height: 1.2;
     text-transform: none; }
