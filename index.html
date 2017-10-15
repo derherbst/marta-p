@@ -3,25 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>MARTA PFEIFFER</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="js/jquery-3.2.1.slim.min.js"></script>
-  <script src="js/jquery.slidereveal.min.js"></script>
+  <script src="js/scotchPanels.js"></script>
+<!--  <script src="js/jquery.slidereveal.min.js"></script>-->
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>-->
 </head>
 <body>
-  <main class="main">
+  <main id="panel" class="panel"> <!--class "main"-->
     <section class="section section--intro">
       <div class="section__inner">
-        <h1 class="section__name">Marta Pfeiffer</h1>
+        <h1 class="section__name toggle-button toggle-panel">Marta Pfeiffer</h1>
         <ul class="social-wrapper section__social">
           <li class="social-wrapper__item">Mail</li>
           <li class="social-wrapper__item">Fb</li>
           <li class="social-wrapper__item">Insta</li>
         </ul>
-<!--
-        <div class="section__side section__side--work">
-          <span>Work</span>
-        </div>
--->
+      </div>
+      <div id="toggle-panel" class="section__side"> <!--hide-manually-->
+        <span>About</span>
       </div>
     </section>
     <section class="section section--exp">
@@ -56,18 +57,15 @@
             </div>
           </div>
         </div>
-<!--
-        <div id="hide-manually" class="section__side">
-          <span>About</span>
-        </div>
--->
       </div>
     </section>
   </main>
+<!--
   <div id="hide-manually" class="section__side">
     <span>About</span>
   </div>
-  <section id='slider' class="section section--work">
+-->
+  <section id='scotch-panel' class="section section--work"> <!--id "slider" --><!--menu-->
     <div id='trigger' class="section__side--work">
       <span>Work</span>
     </div>
@@ -130,6 +128,7 @@
       </div>
     </div>
   </section>
+<!--
   <script>
     var sample1 = $("#slider").slideReveal({
       trigger: $("#trigger"),
@@ -139,6 +138,58 @@
     $("#hide-manually").click(function(){
       sample1.slideReveal("hide");
     });
+//    $('#slider').slideReveal({
+//  trigger: $("#trigger"),
+//      position: "right",
+//      width: "90%"
+//});
+    
+    var sample1 = $("#slider").slideReveal({
+          trigger: $("#trigger"),
+          position: "right",
+          width: "90%"
+        })
+    $("#hide-manually").click(function(){
+          sample1.slideReveal("hide");
+        });
   </script>
+-->
+<!--
+  <script src="js/slideout.min.js"></script>
+  <script>
+    var slideout = new Slideout({
+      'panel': document.getElementById('panel'),
+      'menu': document.getElementById('menu'),
+      'padding': 256,
+      'tolerance': 70,
+      'side': 'right'
+    });
+    
+    // Toggle button
+    document.querySelector('.toggle-button').addEventListener('click', function() {
+      slideout.toggle();
+    });
+  </script>
+-->
+<script>
+  var easyPanel = $('#scotch-panel').scotchPanel({
+      containerSelector: 'body',
+      direction: 'right',
+      duration: 300,
+      transition: 'ease',
+      distanceX: '90%',
+      enableEscapeKey: true,
+      afterPanelOpen: function() {
+                        alert('After Panel Opened');
+                    }
+  });
+
+  $('.toggle-panel').click(function() {
+      easyPanel.toggle();
+      return false;
+  });
+  
+  
+</script>
 </body>
 </html>

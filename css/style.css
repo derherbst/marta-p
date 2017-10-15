@@ -493,7 +493,8 @@ nav {
     display: flex;
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
-            align-items: stretch; }
+            align-items: stretch;
+    position: relative; }
   .section--work {
     background: #212121;
     display: -webkit-box;
@@ -504,8 +505,7 @@ nav {
         -ms-flex-direction: row;
             flex-direction: row;
     -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    right: calc(60px + -90vw) !important; }
+        flex-wrap: nowrap; }
 
 .section__inner {
   padding-left: 50px;

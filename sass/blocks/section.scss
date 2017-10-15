@@ -9,6 +9,7 @@
   &--intro {
     display: flex;
     align-items: stretch;
+    position: relative;
   }
   &--work {
 //    overflow: scroll;
@@ -16,7 +17,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    right: calc(60px + -90vw) !important;
+//    right: calc(60px + -90vw) !important;
   }
 }
 
