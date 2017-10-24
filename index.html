@@ -16,9 +16,9 @@
       <div class="section__inner">
         <h1 class="section__name toggle-button toggle-panel">Marta Pfeiffer</h1>
         <ul class="social-wrapper section__social">
-          <li class="social-wrapper__item">Mail</li>
-          <li class="social-wrapper__item">Fb</li>
-          <li class="social-wrapper__item">Insta</li>
+          <li class="social-wrapper__item"><a class="social-wrapper__link" href="#">Mail</a></li>
+          <li class="social-wrapper__item"><a class="social-wrapper__link" href="#">Fb</a></li>
+          <li class="social-wrapper__item"><a class="social-wrapper__link" href="#">Insta</a></li>
         </ul>
       </div>
       <div id="toggle-panel" class="section__side"> <!--hide-manually-->
@@ -178,10 +178,7 @@
       duration: 300,
       transition: 'ease',
       distanceX: '90%',
-      enableEscapeKey: true,
-      afterPanelOpen: function() {
-                        alert('After Panel Opened');
-                    }
+      enableEscapeKey: true
   });
 
   $('.toggle-panel').click(function() {

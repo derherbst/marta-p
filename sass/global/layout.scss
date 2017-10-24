@@ -10,9 +10,7 @@ body {
   min-width: 320px;
   margin: 0 auto;
   font-family: 'Circe_bold', sans-serif;
-//  background-color: $black;
-//  color: $lightPink;
-  text-transform: uppercase;
+  color: #212121;
   position: relative;
 }
 
@@ -62,8 +60,5 @@ img {
 }
 
 nav {
-//  position: absolute;
-//  left: 0;
-//  right: 0;
   cursor: pointer;
 }

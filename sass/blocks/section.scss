@@ -35,7 +35,8 @@
   font-size: 132px;
   line-height: 1.015em;
   font-weight: 600;
-  font-family: CirceEbold, ;
+  font-family: CirceEbold;
+  text-transform: uppercase;
 }
 
 .section__social {
@@ -53,17 +54,19 @@
   font-family: 'Bagnard', serif;
   transform: rotate(-90deg);
   text-transform: capitalize;
-}
-
-.section__side--work {
-  height: 100vh;
-  position: relative;
-  span {
-    transform: rotate(-90deg);
-    position: absolute;
-    top: 50%;
-    transform: rotate(-90deg) translateY(-100px);
-    width: 200px;
-    text-align: center;
+  &--work {
+    height: 100vh;
+    position: relative;
+    span {
+      position: absolute;
+      top: 50%;
+      transform: rotate(-90deg) translateY(-100px);
+      width: 200px;
+      text-align: center;
+      font-family: 'Bagnard', serif;
+      color: #f9c0a7;
+      font-size: 55px;
+      line-height: 1.1em;
+    }
   }
 }
