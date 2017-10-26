@@ -223,7 +223,7 @@
 
                 panel.css({
                     'top': '0',
-                    'right': '-' + "83%",
+                    'right': '-' + panel.settings.distanceX,
                     'width': panel.settings.distanceX,
                     'height': '100%',
                     'position': 'absolute',
@@ -463,7 +463,6 @@
                 } else {
                     panel.settings.beforePanelClose();
                 }
-var digigi = "-83%";
                 panel.parents('.scotch-panel-canvas:first').css({
                     '-ms-transform': 'translate3d('+distanceX+', 0, 0)',
                     '-moz-transform': 'translate3d('+distanceX+', 0, 0)',

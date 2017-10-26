@@ -1,5 +1,6 @@
 .work {
-  padding-left: 140px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .work__block {
@@ -12,6 +13,10 @@
   &:last-child {
     margin-bottom: 0;
   }
+  @include mobile {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
 }
 
 .work__about {
@@ -23,6 +28,12 @@
     line-height: 1.2;
     text-transform:none;
   }
+  @include mobile {
+    order: 2;
+    p {
+      display: none;
+    }
+  }
 }
 
 .work__title {
@@ -30,4 +41,19 @@
   line-height: 1.1;
   font-family: 'Bagnard', serif;
   padding-bottom: 20px;
+  @include mobile {
+    font-size: 15px;
+  }
+}
+
+.work__image-wrapper {
+  @include mobile {
+    order: 1;
+  }
+}
+
+.work__image {
+  @include mobile {
+    width: 100%;
+  }
 }

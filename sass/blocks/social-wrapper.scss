@@ -1,3 +1,14 @@
+.social-wrapper {
+  @include mobile {
+    &--mobile {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+  }
+}
+
 .social-wrapper__item {
   display: inline-block;
   font-size: 77px;
@@ -5,6 +16,11 @@
   font-family: 'Bagnard', serif;
   margin-right: 65px;
   text-transform: capitalize;
+  @include mobile {
+    font-size: 29px;
+    line-height: 1.9;
+    margin-right: 0;
+  }
 }
 
 .social-wrapper__link {

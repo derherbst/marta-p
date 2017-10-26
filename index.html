@@ -3,62 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <title>MARTA PFEIFFER</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="js/jquery-3.2.1.slim.min.js"></script>
   <script src="js/scotchPanels.js"></script>
 <!--  <script src="js/jquery.slidereveal.min.js"></script>-->
 <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>-->
 </head>
-<body>
-  <main id="panel" class="panel"> <!--class "main"-->
-    <section class="section section--intro">
-      <div class="section__inner">
-        <h1 class="section__name toggle-button toggle-panel">Marta Pfeiffer</h1>
-        <ul class="social-wrapper section__social">
-          <li class="social-wrapper__item"><a class="social-wrapper__link" href="#">Mail</a></li>
-          <li class="social-wrapper__item"><a class="social-wrapper__link" href="#">Fb</a></li>
-          <li class="social-wrapper__item"><a class="social-wrapper__link" href="#">Insta</a></li>
-        </ul>
-      </div>
-      <div id="toggle-panel" class="section__side"> <!--hide-manually-->
-        <span>About</span>
-      </div>
-    </section>
-    <section class="section section--exp">
-      <div class="section__inner">
-        <div class="exp-wrapper">
-          <div class="exp-wrapper__col">
-            <div class="exp-wrapper__block">
-              <div class="exp-wrapper__date">2009/15</div>
-              <div class="exp-wrapper__text">Moscow State University of Printing Arts</div>
-            </div>
-            <div class="exp-wrapper__block">
-              <div class="exp-wrapper__date">2013</div>
-              <div class="exp-wrapper__text">Academy of Visual Arts, Leipzig</div>
-            </div>
-            <div class="exp-wrapper__block">
-              <div class="exp-wrapper__date">2014</div>
-              <div class="exp-wrapper__text">L'officiel Russia, designer</div>
-            </div>
-          </div>
-          <div class="exp-wrapper__col">
-            <div class="exp-wrapper__block">
-              <div class="exp-wrapper__date">2015</div>
-              <div class="exp-wrapper__text">Fashionograph, designer</div>
-            </div>
-            <div class="exp-wrapper__block">
-              <div class="exp-wrapper__date">2015/2017</div>
-              <div class="exp-wrapper__text">ITK brotherhood, designer</div>
-            </div>
-            <div class="exp-wrapper__block">
-              <div class="exp-wrapper__date">2017</div>
-              <div class="exp-wrapper__text">SOZDANO, designer</div>
-            </div>
-          </div>
+<body class="body-wrapper">
+  <main id="panel" class="panel main"> <!--class "main"-->
+    <div class="main__inner">
+      <section class="section section--intro">
+        <div class="section__inner">
+          <h1 class="section__name">Marta Pfeiffer</h1>
+          <ul class="social-wrapper section__social">
+            <li class="social-wrapper__item">
+              <a class="social-wrapper__link" href="mailto:name@rapidtables.com">Mail</a>
+            </li>
+            <li class="social-wrapper__item">
+              <a class="social-wrapper__link" href="https://www.facebook.com/wunder.marta" target="_blank">Fb</a>
+            </li>
+            <li class="social-wrapper__item">
+              <a class="social-wrapper__link" href="https://www.instagram.com/marta_pfeiffer" target="_blank">Insta</a>
+            </li>
+          </ul>
         </div>
-      </div>
-    </section>
+      </section>
+      <section class="section section--exp">
+        <div class="section__inner">
+          <div class="exp-wrapper">
+            <div class="exp-wrapper__col">
+              <div class="exp-wrapper__block">
+                <div class="exp-wrapper__date">2009/15</div>
+                <div class="exp-wrapper__text">Moscow State University of Printing Arts</div>
+              </div>
+              <div class="exp-wrapper__block">
+                <div class="exp-wrapper__date">2013</div>
+                <div class="exp-wrapper__text">Academy of Visual Arts, Leipzig</div>
+              </div>
+              <div class="exp-wrapper__block">
+                <div class="exp-wrapper__date">2014</div>
+                <div class="exp-wrapper__text">L'officiel Russia, designer</div>
+              </div>
+            </div>
+            <div class="exp-wrapper__col">
+              <div class="exp-wrapper__block">
+                <div class="exp-wrapper__date">2015</div>
+                <div class="exp-wrapper__text">Fashionograph, designer</div>
+              </div>
+              <div class="exp-wrapper__block">
+                <div class="exp-wrapper__date">2015/17</div>
+                <div class="exp-wrapper__text">ITK brotherhood, designer</div>
+              </div>
+              <div class="exp-wrapper__block">
+                <div class="exp-wrapper__date">2017</div>
+                <div class="exp-wrapper__text">SOZDANO, <br>designer</div>
+              </div>
+            </div>
+          </div>
+          <ul class="social-wrapper social-wrapper--mobile section__social section__social--mobile">
+            <li class="social-wrapper__item">
+              <a class="social-wrapper__link" href="mailto:name@rapidtables.com">Mail</a>
+            </li>
+            <li class="social-wrapper__item">
+              <a class="social-wrapper__link" href="https://www.facebook.com/wunder.marta" target="_blank">Fb</a>
+            </li>
+            <li class="social-wrapper__item">
+              <a class="social-wrapper__link" href="https://www.instagram.com/marta_pfeiffer" target="_blank">Insta</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <div id="toggle-panel" class="section__side overlay"> <!--hide-manually-->
+      <span>About</span>
+    </div>
+    <div id='trigger' class="section__side section__side--work toggle-button toggle-panel">
+      <span>Work</span>
+    </div>
   </main>
 <!--
   <div id="hide-manually" class="section__side">
@@ -66,9 +88,6 @@
   </div>
 -->
   <section id='scotch-panel' class="section section--work"> <!--id "slider" --><!--menu-->
-    <div id='trigger' class="section__side--work">
-      <span>Work</span>
-    </div>
     <div class="section__inner section__inner--work">
       <div class="work">
         <div class="work__block">
@@ -128,56 +147,13 @@
       </div>
     </div>
   </section>
-<!--
-  <script>
-    var sample1 = $("#slider").slideReveal({
-      trigger: $("#trigger"),
-      position: "right",
-      width: "90%"
-    })
-    $("#hide-manually").click(function(){
-      sample1.slideReveal("hide");
-    });
-//    $('#slider').slideReveal({
-//  trigger: $("#trigger"),
-//      position: "right",
-//      width: "90%"
-//});
-    
-    var sample1 = $("#slider").slideReveal({
-          trigger: $("#trigger"),
-          position: "right",
-          width: "90%"
-        })
-    $("#hide-manually").click(function(){
-          sample1.slideReveal("hide");
-        });
-  </script>
--->
-<!--
-  <script src="js/slideout.min.js"></script>
-  <script>
-    var slideout = new Slideout({
-      'panel': document.getElementById('panel'),
-      'menu': document.getElementById('menu'),
-      'padding': 256,
-      'tolerance': 70,
-      'side': 'right'
-    });
-    
-    // Toggle button
-    document.querySelector('.toggle-button').addEventListener('click', function() {
-      slideout.toggle();
-    });
-  </script>
--->
 <script>
   var easyPanel = $('#scotch-panel').scotchPanel({
       containerSelector: 'body',
       direction: 'right',
-      duration: 300,
+      duration: 200,
       transition: 'ease',
-      distanceX: '90%',
+      distanceX: '85%',
       enableEscapeKey: true
   });
 
@@ -185,8 +161,16 @@
       easyPanel.toggle();
       return false;
   });
-  
-  
+  $('.overlay').click(function() {
+    // CLOSE ONLY
+    easyPanel.close();
+  });
+
+$(window).resize(function(){
+	if ($(window).width() <= 500){	
+		easyPanel.scotchPanel.distanceX = "70%";
+	}	
+});
 </script>
 </body>
 </html>

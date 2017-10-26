@@ -12,12 +12,25 @@
     position: relative;
   }
   &--work {
-//    overflow: scroll;
     background: #212121;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-//    right: calc(60px + -90vw) !important;
+    box-sizing: border-box;
+  }
+  @include mobile {
+    padding: 39px 0 39px 19px;
+    height: auto;
+    &--intro {
+      padding-bottom: 70px;
+    }
+    &--exp {
+      padding-top: 0;
+    }
+    &--work {
+      padding-left: 0;
+      padding-right: 34px;
+    }
   }
 }
 
@@ -28,6 +41,12 @@
   &--work {
     overflow: scroll;
   }
+  @include mobile {
+    padding-left: 19px;
+    &--work {
+      padding-left: 0;
+    }
+  }
 }
 
 .section__name {
@@ -37,36 +56,62 @@
   font-weight: 600;
   font-family: CirceEbold;
   text-transform: uppercase;
+  @include mobile {
+    width: 216px;
+    font-size: 50px;
+    line-height: 1;
+    font-family: Circebold;
+  }
 }
 
 .section__social {
   position: absolute;
   bottom: 0;
   left: 50px;
+  &--mobile {
+    display: none;
+  }
+  @include mobile {
+    display: none;
+    &--mobile {
+      display: block;
+      position: static;
+    }
+  }
 }
 
 .section__side {
-  position: absolute;
-  top: 50%;
-  right: 0;
+  width: 106px;
+//  position: absolute;
+//  top: 50%;
+//  right: -43%;
+//  height: 106px;
+//  text-align: center;
+//  width: 100vw;
   font-size: 55px;
   line-height: 1.1em;
   font-family: 'Bagnard', serif;
-  transform: rotate(-90deg);
+//  transform: rotate(-90deg);
   text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &--work {
-    height: 100vh;
-    position: relative;
-    span {
-      position: absolute;
-      top: 50%;
-      transform: rotate(-90deg) translateY(-100px);
-      width: 200px;
-      text-align: center;
-      font-family: 'Bagnard', serif;
-      color: #f9c0a7;
-      font-size: 55px;
-      line-height: 1.1em;
+//    right: -48%;
+    background: #212121;
+    color: #f9c0a7;
+    border-right: 3px solid #212121;
+    margin-right: -1px;
+  }
+  span {
+    transform: rotate(-90deg);
+  }
+  @include mobile {
+    font-size: 29px;
+    line-height: 54px;
+    width: 30px;
+    &--work {
+      width: 35px;
     }
   }
 }

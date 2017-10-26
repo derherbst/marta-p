@@ -8,3 +8,21 @@
 //  width: $width;
 //  margin: 0 auto;
 //}
+
+@mixin mobile {
+  @media (max-width: $mobile-width) {
+    @content
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet-width) {
+    @content
+  }
+}
+
+@mixin desktop {
+  @media (max-width: $desktop-width) {
+    @content
+  }
+}
