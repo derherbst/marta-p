@@ -1,0 +1,14 @@
+.panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+  min-height: 100vh;
+}
+
+.is-opened {
+  display: block;
+  position: fixed;
+  right: 0;
+  width: calc(100% - 60px);
+  transform: translateX(0);
+}

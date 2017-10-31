@@ -5,6 +5,7 @@
       flex-direction: row;
       flex-wrap: nowrap;
       justify-content: space-between;
+      padding-right: 10px;
     }
   }
 }
@@ -17,7 +18,7 @@
   margin-right: 65px;
   text-transform: capitalize;
   @include mobile {
-    font-size: 29px;
+    font-size: 28px;
     line-height: 1.9;
     margin-right: 0;
   }

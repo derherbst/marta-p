@@ -5,14 +5,15 @@
   <title>MARTA PFEIFFER</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/flexslider.css">
   <script src="js/jquery-3.2.1.slim.min.js"></script>
   <script src="js/scotchPanels.js"></script>
 <!--  <script src="js/jquery.slidereveal.min.js"></script>-->
 <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>-->
 </head>
 <body class="body-wrapper">
-  <main id="panel" class="panel main"> <!--class "main"-->
-    <div class="main__inner">
+  <main id="panel" class="main panel"> <!--class "main"-->
+     <div class="main__inner">
       <section class="section section--intro">
         <div class="section__inner">
           <h1 class="section__name">Marta Pfeiffer</h1>
@@ -74,13 +75,15 @@
           </ul>
         </div>
       </section>
-    </div>
-    <div id="toggle-panel" class="section__side overlay"> <!--hide-manually-->
-      <span>About</span>
-    </div>
+<!--
     <div id='trigger' class="section__side section__side--work toggle-button toggle-panel">
       <span>Work</span>
     </div>
+-->
+ </div>
+ <div id="toggle-panel" class="section__side section__side--about overlay"> <!--hide-manually-->
+          <span>About</span>
+        </div>
   </main>
 <!--
   <div id="hide-manually" class="section__side">
@@ -88,6 +91,9 @@
   </div>
 -->
   <section id='scotch-panel' class="section section--work"> <!--id "slider" --><!--menu-->
+    <div id='trigger' class="section__side section__side--work toggle-button toggle-panel">
+      <span>Work</span>
+    </div>
     <div class="section__inner section__inner--work">
       <div class="work">
         <div class="work__block">
@@ -101,7 +107,7 @@
         </div>
         <div class="work__block">
           <div class="work__about">
-            <h2 class="work__title">TYPO-<br>GRAPHY NAMED AFTER ME</h2>
+            <h2 class="work__title">TYPO<span>-</span><br>GRAPHY NAMED AFTER ME</h2>
             <p>The written separation into syllables is usually marked by a hyphen when using English orthography.</p>
           </div>
           <div class="work__image-wrapper">
@@ -119,7 +125,7 @@
         </div>
         <div class="work__block">
           <div class="work__about">
-            <h2 class="work__title">MODERN ARHI-<br>TEKTUR</h2>
+            <h2 class="work__title">MODERN ARHI<span>-</span><br>TEKTUR</h2>
             <p>The written separation into syllables is usually marked by a hyphen when using English orthography.</p>
           </div>
           <div class="work__image-wrapper">
@@ -147,30 +153,55 @@
       </div>
     </div>
   </section>
+  <script>
+    var buttonLk = document.querySelector('.section__side--work');
+    var closePopUp = document.querySelector('.section__side--about');
+    var korpPopUp = document.querySelector('.section--work');
+    var body = document.querySelector('.panel');
+
+    buttonLk.addEventListener('click', function () {
+
+      korpPopUp.classList.add('is-opened');
+      body.style.transform = 'translateX(calc(-100% + 60px))';
+    });
+
+    closePopUp.addEventListener('click', function () {
+
+      korpPopUp.classList.remove('is-opened');
+    body.style.transform = 'translateX(0%)';
+    });
+  </script>
+<!--
 <script>
-  var easyPanel = $('#scotch-panel').scotchPanel({
-      containerSelector: 'body',
-      direction: 'right',
-      duration: 200,
-      transition: 'ease',
-      distanceX: '85%',
-      enableEscapeKey: true
-  });
+  var easyPanel;
+  if(window.innerWidth < 414) {
+    easyPanel = $('#scotch-panel').scotchPanel({
+        containerSelector: 'body',
+        direction: 'right',
+        duration: 200,
+        transition: 'ease',
+        distanceX: '75%',
+        enableEscapeKey: true
+    });
+  } else {
+    easyPanel = $('#scotch-panel').scotchPanel({
+        containerSelector: 'body',
+        direction: 'right',
+        duration: 200,
+        transition: 'ease',
+        distanceX: '85%',
+        enableEscapeKey: true
+    });
+  }
+    $('.toggle-panel').click(function() {
+        easyPanel.toggle();
+        return false;
+    });
+    $('.overlay').click(function() {
+      easyPanel.close();
+    });
 
-  $('.toggle-panel').click(function() {
-      easyPanel.toggle();
-      return false;
-  });
-  $('.overlay').click(function() {
-    // CLOSE ONLY
-    easyPanel.close();
-  });
-
-$(window).resize(function(){
-	if ($(window).width() <= 500){	
-		easyPanel.scotchPanel.distanceX = "70%";
-	}	
-});
 </script>
+-->
 </body>
 </html>

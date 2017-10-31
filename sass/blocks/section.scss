@@ -17,9 +17,17 @@
     flex-direction: row;
     flex-wrap: nowrap;
     box-sizing: border-box;
+    z-index: 1111;
+    display: block;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    transform: translateX(-60px);
   }
   @include mobile {
-    padding: 39px 0 39px 19px;
+    padding: 39px 0 39px 10px;
     height: auto;
     &--intro {
       padding-bottom: 70px;
@@ -82,32 +90,32 @@
 
 .section__side {
   width: 106px;
-//  position: absolute;
-//  top: 50%;
-//  right: -43%;
-//  height: 106px;
-//  text-align: center;
-//  width: 100vw;
   font-size: 55px;
   line-height: 1.1em;
   font-family: 'Bagnard', serif;
-//  transform: rotate(-90deg);
   text-transform: capitalize;
   display: flex;
   justify-content: center;
   align-items: center;
+  &--about {
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
   &--work {
-//    right: -48%;
     background: #212121;
-    color: #f9c0a7;
-    border-right: 3px solid #212121;
-    margin-right: -1px;
+    height: 100vh;
+    position: relative;
   }
   span {
+//    position: absolute;
+//    top: 50%;
     transform: rotate(-90deg);
+//    width: 200px;
+//    text-align: center;
   }
   @include mobile {
-    font-size: 29px;
+    font-size: 21px;
     line-height: 54px;
     width: 30px;
     &--work {
